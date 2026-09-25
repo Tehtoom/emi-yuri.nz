@@ -2,6 +2,17 @@
 This repositories use is for documenting aspects of my servers security, storage, software, and hardware.
 It's use is for keeping logs on backups, reports, and information that will help with learning more about servers and networking, while also being a vital backup of knowledge just in case anything breaks.
 
+## System information
+```
+CPU    :    Intel i7 4790k
+RAM    :    20GB mixed-speed ddr3
+MOB    :    Gigabyte GA-H97M-D3H Micro ATX LGA1150 
+HDD    :    Fujitsu 120GB 2.5" SATA 7200RPM
+            Seagate Constellation 4TB SAS 7200RPM
+            3x Seagate Constellation 3TB SAS 7200RPM
+            2x IBM HGST 3TB SAS 7200RPM
+PSU    :    650W Thermalright TR-SGFX
+CASE   :    Jonsbo n4
 
 <details>
 <summary> Docker Services</summary>
@@ -46,15 +57,14 @@ TO DO:
 <summary> Network Configuration</summary>
 
 ### Server
-Server access is limited through docker containers.
-Root access is only available through NetControl.
+Server access is limited through docker containers and the network controller/network switch
 
 ```
 IP ~~~.~~~.~~.72 - public network
 IP ~~~.~~~.~~.73 - private network
 
 ```
-NetControl
+NetworkControl
 
 ```
 IP ~~.~~~.~~.113 
