@@ -14,6 +14,8 @@ HDD    :    Fujitsu 120GB 2.5" SATA 7200RPM
 PSU    :    650W Thermalright TR-SGFX
 CASE   :    Jonsbo n4
 
+```
+
 <details>
 <summary> Docker Services</summary>
     
