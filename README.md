@@ -34,7 +34,7 @@ A public facing code base
 Users can view all public repos, but are not able to interact unless an account is created by an admin.
 
 ### Protected Services
-dash, container control, vpn - All are private
+system dash, container control, vpn - All are private
 
 </details>
 
@@ -47,6 +47,24 @@ TO DO:
 <summary> Network Configuration</summary>
 
 Router - Layer 2/1 switch - Layer 3 switch
+
+### Layer 3 switch
+```
+Allied Telesyn AT-8624T/2M
+
+24 x 10/100 rj45
+ 2 x AT-A47 1GBps
+   - 2x AT-G8SX-01 GBIC
+     850nm, Multi Mode SC interface
+```
+
+## Layer 2 switch
+```
+Allied Telesis AT-8000GS/48
+48 x 10/100/1000 rj45
+ 4 x 1GBps SFP
+   - 1 x Allied Telesis AT-SPSX 1000BASE-SX 850nm Duplex LC/UPC MMF Transceiver Module
+```
 
 </details>
 
