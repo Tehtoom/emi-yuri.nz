@@ -23,76 +23,42 @@ CASE   :    Jonsbo n4
 
 A public facing jellyfin media server.
 Users must request account creation to access.
-```
-config is in a script
-```
+
 ### Immich
 
-A private photos app, like google photos.
-No other users are to be added, but albums can be shared and downloaded by others.
-```
-/opt/
-```
+Emi's private photos app
+
 ### Forjego
 
-A public facing code base like github.
+A public facing code base
 Users can view all public repos, but are not able to interact unless an account is created by an admin.
-Mainly used as an alternative to github *just* for emi
-```
-/opt/
-```
-### glances dash
 
-glances is protected and can only be accessed by emi
-
-```
-/opt/
-```
+### Protected Services
+dash, container control, vpn - All are private
 
 </details>
 
 TO DO:
 - [ ] Add live error reporting for drives
-- [ ] Add drive temperatures to glances, or new container 
+- [ ] Add drive temperatures to glances, or new container
+- [ ] Add network switch control from other pc to layer 3 switch
 
 <details>
 <summary> Network Configuration</summary>
 
-### Server
-Server access is limited through docker containers and the network controller/network switch
-
-```
-IP ~~~.~~~.~~.72 - public network
-IP ~~~.~~~.~~.73 - private network
-
-```
-NetworkControl
-
-```
-IP ~~.~~~.~~.113 
-All access is heavily restricted
-```
+Router - Layer 2/1 switch - Layer 3 switch
 
 </details>
 
 TO DO:
-- [ ] Add physical public and private access through the onboard nic and PCI nic
+- [ ] Update physical Switch config and VLAN systems. 
 
-
-
-<details>
-<summary> Things to fix </summary>
-
-|Directory                  |User                                       |Access|
-|---------------------------|-------------------------------------------|------|
-|/mnt/raid/media/forgejo    |DEFAULT                                    |NAN   | to be fixed
-
-</details>
 
 <details>
 <summary> File system tree</summary>
 
-4tb sas drive acts as a weekly backup for immich, jellyfin music, and forgejo.
+4tb is a weekly backup for ALL non replaceable media.
+
 ```
 Raid Array:
 ├── Backups for older media
@@ -101,15 +67,15 @@ Raid Array:
 │   ├── and 
 │   ├── users
 │   └── shared media
-│       └── restricted private access with permission
+│       └── 
 ├── shared media
-│   └── restricted private access with permission
+│   └── 
 └── Boot drive backup
   
 
 /mnt/4tb/
 ├── Backups
-│   └── ....
+│   └── Raid Array
 ......
 ```
 
@@ -117,9 +83,9 @@ Raid Array:
 
 <details>
 <summary> Raid Info</summary>
+A systemd service is used on a weekly timer to back up contents.
 
-### Information for raid scripts and backup process
-```
-TO BE ADDED (IN PROGRESS)
-```
 </details>
+
+TO DO:
+- [ ] Update Script and put config here (it shouldn't be a vulnerability lol)
